@@ -1,0 +1,53 @@
+POST http://localhost:3977/api/v1/people/user HTTP/1.1
+Content-Type: application/json
+
+{
+    "user_name": "Manuela",
+    "lastname": "Travolta",
+    "email": "manuela@gmail.com",
+    "contact": {
+        "cellphone": "304545783",
+        "address": {
+            "city": "Pereira City",
+            "code_zip": "16554",
+            "geolocalization": [67545, -56234]
+        }
+    },
+    "proffession": {
+        "name_job": "Actor",
+        "position_job": "Extra",
+        "organization": "Holliwood"
+    }
+}
+
+###
+GET http://localhost:3977/api/v1/people HTTP/1.1
+
+###
+GET http://localhost:3977/api/v1/people/6349fa8c6ef446eb239aa2d7 HTTP/1.1
+
+###
+PUT http://localhost:3977/api/v1/people/6349fa8c6ef446eb239aa2d7 HTTP/1.1
+Content-Type: application/json
+
+{
+    "user_name": "Manuela",
+    "lastname": "No travolta",
+    "email": "manuela@gmail.com",
+    "contact": {
+        "cellphone": "304545783",
+        "address": {
+            "city": "Manizales City",
+            "code_zip": "16554",
+            "geolocalization": [67545, -56234]
+        }
+    },
+    "proffession": {
+        "name_job": "Actor",
+        "position_job": "Extra",
+        "organization": "Holliwood"
+    }
+}
+
+###
+DELETE http://localhost:3977/api/v1/people/6349fa8c6ef446eb239aa2d7 HTTP/1.1
